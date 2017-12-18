@@ -8,14 +8,14 @@ data members
 Constructors
 and 
 methods</help_text>
-  <zoom_level>10</zoom_level>
+  <zoom_level>5</zoom_level>
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
       <x>0</x>
       <y>0</y>
-      <w>151</w>
-      <h>111</h>
+      <w>75</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>Pokemon Design
 Dylan Zettler
@@ -42,9 +42,9 @@ for(String textline : textlines) {
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>120</y>
-      <w>210</w>
-      <h>130</h>
+      <y>60</y>
+      <w>105</w>
+      <h>65</h>
     </coordinates>
     <panel_attributes>package :: class
 --
@@ -60,9 +60,9 @@ methods</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>360</y>
-      <w>190</w>
-      <h>150</h>
+      <y>180</y>
+      <w>95</w>
+      <h>75</h>
     </coordinates>
     <panel_attributes>package :: Class
 
@@ -77,10 +77,10 @@ constructors and methods</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>240</x>
-      <y>10</y>
-      <w>300</w>
-      <h>220</h>
+      <x>120</x>
+      <y>5</y>
+      <w>150</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>/pokemon.model :: /Pokemon/
 --
@@ -94,16 +94,18 @@ constructors and methods</panel_attributes>
 + Pokemon(int, String) : constructor
 + toString() : String
 + getPokemonInformation() : String
-+ getPokemonTypes() : String</panel_attributes>
++ getPokemonTypes() : String
+bg=#FFA23
+transparency=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>260</y>
-      <w>180</w>
-      <h>90</h>
+      <y>130</y>
+      <w>90</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>package :: Interface
 
@@ -116,48 +118,62 @@ methods
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>240</x>
-      <y>240</y>
-      <w>300</w>
-      <h>80</h>
+      <x>280</x>
+      <y>5</y>
+      <w>150</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>/pokemon.model :: Electric/
 --
 + doLightningStrike() : void
 + sayPika() : String
 + intimidate() : boolean
-</panel_attributes>
+
+bg=#FFA5555
+transparency=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>280</x>
-      <y>510</y>
-      <w>210</w>
-      <h>30</h>
+      <x>290</x>
+      <y>50</y>
+      <w>130</w>
+      <h>35</h>
     </coordinates>
-    <panel_attributes>pokemon.model :: Pikachu</panel_attributes>
+    <panel_attributes>pokemon.model :: Pikachu
+--
+
+--
++Pikachu(int, String) : Constructor
+bg=yellow
+transparency=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>200</x>
-      <y>560</y>
-      <w>180</w>
-      <h>30</h>
+      <x>295</x>
+      <y>90</y>
+      <w>120</w>
+      <h>35</h>
     </coordinates>
-    <panel_attributes>pokemon.model :: Raichu</panel_attributes>
+    <panel_attributes>pokemon.model :: Raichu
+--
+
+--
++Raichu(int, String) : Constructor
+bg=yellow
+transparency=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>30</x>
-      <y>520</y>
-      <w>210</w>
-      <h>30</h>
+      <x>0</x>
+      <y>265</y>
+      <w>105</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>pokemon.model :: TissueBox</panel_attributes>
     <additional_attributes/>
@@ -165,21 +181,10 @@ methods
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>660</x>
-      <y>210</y>
-      <w>190</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>180</x>
-      <y>500</y>
-      <w>30</w>
-      <h>50</h>
+      <x>90</x>
+      <y>250</y>
+      <w>15</w>
+      <h>25</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
@@ -187,131 +192,269 @@ methods
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>390</x>
-      <y>560</y>
-      <w>180</w>
-      <h>30</h>
+      <x>295</x>
+      <y>130</y>
+      <w>120</w>
+      <h>35</h>
     </coordinates>
-    <panel_attributes>pokemon.model :: Zapdos</panel_attributes>
+    <panel_attributes>pokemon.model :: Zapdos
+--
+
+--
++Zapdos(int, String) : Constructor
+bg=yellow
+transparency=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>300</x>
-      <y>530</y>
-      <w>30</w>
-      <h>50</h>
+      <x>325</x>
+      <y>80</y>
+      <w>15</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>440</x>
-      <y>530</y>
-      <w>30</w>
-      <h>50</h>
+      <x>370</x>
+      <y>85</y>
+      <w>15</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>280</x>
-      <y>600</y>
-      <w>220</w>
-      <h>30</h>
+      <x>605</x>
+      <y>50</y>
+      <w>140</w>
+      <h>35</h>
     </coordinates>
-    <panel_attributes>pokemon.model :: Charmander</panel_attributes>
+    <panel_attributes>pokemon.model :: Charmander
+--
+
+--
+Charmander(int, String) : Constructor
+bg=orange
+transparency=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>480</x>
-      <y>210</y>
-      <w>130</w>
-      <h>330</h>
+      <x>265</x>
+      <y>50</y>
+      <w>35</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>60.0;10.0;110.0;10.0;110.0;310.0;10.0;310.0</additional_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>240</x>
-      <y>330</y>
-      <w>300</w>
-      <h>80</h>
+      <x>440</x>
+      <y>5</y>
+      <w>150</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>/pokemon.model :: Water/
 --
 + doWhirlpool() : void
 + doSoak() : void
 + sayBubblebeam() : string
-</panel_attributes>
+bg=#FFA5555
+transparency=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>240</x>
-      <y>420</y>
-      <w>300</w>
-      <h>80</h>
+      <x>600</x>
+      <y>5</y>
+      <w>150</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>/pokemon.model :: Fire/
 --
 + doFireblast(): int
 + sayBlastOff() : string
-+ doIncinerate() : void</panel_attributes>
++ doIncinerate() : void
+bg=#FFA5555
+transparency=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>180</x>
-      <y>650</y>
+      <x>610</x>
+      <y>130</y>
+      <w>130</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>pokemon.model :: Charizard
+--
+
+--
++Charizard(int, String) : Constructor
+bg=orange
+transparency=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>610</x>
+      <y>90</y>
+      <w>130</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>pokemon.model :: Flareon
+--
+
+--
++Flareon(int, String) : Constructor
+bg=orange
+transparency=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>620</x>
+      <y>85</y>
+      <w>15</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>700</x>
+      <y>75</y>
+      <w>15</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>50</y>
+      <w>135</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>pokemon.model :: Squirtle
+--
+
+--
++Squirtle(int, String) : Constructor
+bg=cyan
+transparency=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>455</x>
+      <y>90</y>
+      <w>125</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>pokemon.model :: Gyardos
+--
+
+--
++Gyardos(int, String) : Constructor
+bg=cyan
+transparency=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>495</x>
+      <y>75</y>
+      <w>15</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>250</x>
+      <y>60</y>
+      <w>210</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;240.0;360.0;240.0;360.0;10.0;400.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>60</y>
+      <w>415</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;320.0;790.0;320.0;790.0;10.0;810.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>365</x>
+      <y>35</y>
+      <w>15</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>35</y>
+      <w>15</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>700</x>
+      <y>35</y>
+      <w>15</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>410</x>
+      <y>35</y>
       <w>200</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>pokemon.model :: Charizard</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>390</x>
-      <y>650</y>
-      <w>190</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>pokemon.model :: Flareon</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>300</x>
-      <y>620</y>
-      <w>30</w>
-      <h>50</h>
+      <h>110</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>460</x>
-      <y>620</y>
-      <w>30</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;140.0;60.0;140.0;60.0;200.0;380.0;200.0;380.0;10.0</additional_attributes>
   </element>
 </diagram>
