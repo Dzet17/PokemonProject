@@ -1,4 +1,4 @@
-package pokemon.model;
+package pokemon.model.types;
 
 public abstract class Pokemon
 {
@@ -9,7 +9,7 @@ public abstract class Pokemon
 	private String name;
 	private boolean canEvolve;
 	
-	public Pokemon(String name, int number)
+	public Pokemon(int number, String name)
 	{
 		this.name = name;
 		this.number = number;
