@@ -5,16 +5,19 @@ public class Charizard extends Charmander
 	public Charizard()
 	{
 		super(6, "Charizard");
+		setup();
 	}
 	
 	public Charizard(String name)
 	{
 		super(6, name);
+		setup();
 	}
 
 	public Charizard(int number, String name)
 	{
 		super(number, name);
+		setup();
 	}
 	protected void setup()
 	{

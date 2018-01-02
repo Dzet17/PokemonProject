@@ -3,59 +3,53 @@ package pokemon.view;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
+import javax.swing.JCheckBox;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import javax.swing.SpringLayout;
+import javax.swing.JComboBox;
 
 import pokemon.controller.PokemonController;
 
 public class PokemonPanel extends JPanel
-	{
-		private PokemonController appController;
-		private JButton pokemonButton;
-		private JTextField inputField;
-		private JTextArea pokemonArea;
-		private SpringLayout baseLayout;
-		private SpringLayout baseLayout_1;
-		private JButton checkerButton;
-		private JLabel infoLabel;
-		private JScrollPane chatScrollPane;
-	
+{
+	public PokemonPanel() {
+	}
+	private PokemonController appController;
 
-	public PokemonPanel(PokemonController appController)
-	{
-		super();
-		this.appController = appController;
-		
-		pokemonButton = new JButton("Enter");
-		inputField = new JTextField();
-		infoLabel = new JLabel("Enter Pokemon");
-		baseLayout = new SpringLayout();
-		
-		setupScrollPane();
-		setupPanel();
-		setupLayout();
-		setupListeners();
-	}
+	private JLabel healthLabel;
+	private JLabel attackLabel;
+	private JLabel nameLabel;
+	private JLabel numberLabel;
+	private JLabel evolvableLabel;
+	private JLabel modifierLabel;
+	private JLabel iconLabel;
 	
-	private void setupScrollPane()
-	{
-		
-	}
+	private JCheckBox evolvableBox;
+	private JTextField nameField;
+	private JTextField numberField;
+	private JTextField attackField;
+	private JTextField healthField;
+	private JTextField modifierField;
 	
-	private void setupLayout()
-	{
-		
-	}
+	private JTextArea decriptionArea;
+	private JTextArea typeArea;
 	
-	private void setupListeners()
-	{
-		
-	}
+	private JButton saveButton;
+	private JButton clearButton;
+	private JComboBox pokedexDropDown;
 	
-	private void setupPanel()
+	private JPanel firstType;
+	private JPanel secondType;
+	private JPanel thirdType;
+	private JPanel fourthType;
+	
+	private void updatePokedexInfo(int index)
 	{
-		
+		nameField.setText(appController.getPokedex().get(index).getName());
+		evolvableBox.setSelected(appController.getPokedex().get(index).isCanEvolve());
+		numberField.setText(appController.getPokedex().get(index).getNumber() + "");
+		attackField.setText(appController.getPokedex().get(index).getAttackPoints() + "");
+		healthField.setText(appController.getPokedex().get(index).getHealthPoints() + "");
+		modifierField.setText(appController.getPokedex().get(index).getEnhancementModifier() + "");
 	}
 }
