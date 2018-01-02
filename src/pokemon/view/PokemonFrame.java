@@ -7,14 +7,14 @@ import pokemon.view.PokemonPanel;
 
 public class PokemonFrame extends JFrame
 {
-	private PokemonController appController;
-	private PokemonPanel appPanel;
+	private PokemonController pokemonController;
+	private PokemonPanel pokemonPanel;
 	
-	public Pokemon(PokemonController appController)
+	public PokemonFrame(PokemonController pokemonController)
 	{
 		super();
-		this.appController = appController;
-		appPanel = new ChatPanel(appController);
+		this.pokemonController = pokemonController;
+		pokemonPanel = new PokemonPanel(pokemonController);
 		setupFrame();
 	}
 	
@@ -22,7 +22,7 @@ public class PokemonFrame extends JFrame
 	{
 		this.setSize(500,500);
 		this.setTitle("Pokemon");
-		this.setContentPane(appPanel);
+		this.setContentPane(pokemonPanel);
 		this.setResizable(false);
 		this.setVisible(true);
 	}

@@ -1,6 +1,6 @@
 package pokemon.model.types;
 
-public class Zapdos
+public class Charizard
 {
 
 }

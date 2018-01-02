@@ -5,9 +5,9 @@ import pokemon.model.Water;
 public class Squirtle extends Pokemon implements Water, Comparable
 {
 
-	public Squirtle(String name, int number)
+	public Squirtle(int number, String name)
 	{
-		super(name, number);
+		super(7, "Squirtle");
 	}
 
 }
