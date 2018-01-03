@@ -33,28 +33,24 @@ public class Zapdos extends Pokemon implements Electric, Comparable
 	@Override
 	public int compareTo(Object o)
 	{
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public void LightningStrike()
 	{
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public int intimidate(int amount)
 	{
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public String sayPika()
 	{
-		// TODO Auto-generated method stub
 		return null;
 	}
 }

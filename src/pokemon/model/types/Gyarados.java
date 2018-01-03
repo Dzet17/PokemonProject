@@ -34,28 +34,24 @@ public class Gyarados extends Pokemon implements Water, Comparable
 	@Override
 	public int compareTo(Object o)
 	{
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public void doSoak()
 	{
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public int Whirlpool(int amount)
 	{
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public String sayBubbleBeam()
 	{
-		// TODO Auto-generated method stub
 		return null;
 	}
 }

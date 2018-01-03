@@ -34,28 +34,24 @@ public class Charmander extends Pokemon implements Fire, Comparable
 	@Override
 	public int compareTo(Object o)
 	{
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public void doFireblast()
 	{
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public int doIncinerate(int amount)
 	{
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public String sayBlastOff()
 	{
-		// TODO Auto-generated method stub
 		return null;
 	}
 }
