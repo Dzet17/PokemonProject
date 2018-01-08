@@ -47,6 +47,11 @@ boolean valid = false;
 		
 		return valid;
 	}
+
+	public void start()
+	{
+		
+	}
 	
 	
 }
