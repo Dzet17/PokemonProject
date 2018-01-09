@@ -1,5 +1,6 @@
 package pokemon.view;
 
+import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -7,42 +8,157 @@ import javax.swing.JCheckBox;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
-
 import pokemon.controller.PokemonController;
+import pokemon.model.*;
+import pokemon.model.types.*;
+import java.awt.event.*;
 
 public class PokemonPanel extends JPanel
 {
-	public PokemonPanel() {
-	}
-	private PokemonController appController;
+	
+		private PokemonController appController;
+	
+		private JLabel healthLabel;
+		private JLabel attackLabel;
+		private JLabel nameLabel;
+		private JLabel numberLabel;
+		private JLabel evolvableLabel;
+		private JLabel modifierLabel;
+		private JLabel iconLabel;
+	
+		private JCheckBox evolvableBox;
+		private JTextField nameField;
+		private JTextField numberField;
+		private JTextField attackField;
+		private JTextField healthField;
+		private JTextField modifierField;
+	
+		private JTextArea decriptionArea;
+		private JTextArea typeArea;
+	
+		private JButton saveButton;
+		private JButton clearButton;
+		private JComboBox pokedexDropDown;
+	
+		private JPanel firstType;
+		private JPanel secondType;
+		private JPanel thirdType;
+		private JPanel fourthType;
 
-	private JLabel healthLabel;
-	private JLabel attackLabel;
-	private JLabel nameLabel;
-	private JLabel numberLabel;
-	private JLabel evolvableLabel;
-	private JLabel modifierLabel;
-	private JLabel iconLabel;
+	}
 	
-	private JCheckBox evolvableBox;
-	private JTextField nameField;
-	private JTextField numberField;
-	private JTextField attackField;
-	private JTextField healthField;
-	private JTextField modifierField;
-	
-	private JTextArea decriptionArea;
-	private JTextArea typeArea;
-	
-	private JButton saveButton;
-	private JButton clearButton;
-	private JComboBox pokedexDropDown;
-	
-	private JPanel firstType;
-	private JPanel secondType;
-	private JPanel thirdType;
-	private JPanel fourthType;
-	
+	public PokedexPanel(PokemonController appController)
+	{
+		super();
+		this.appController = appController;
+		
+		appLayout = new SpringLayout();
+		
+		evolvableBox = new JCheckBox();
+		nameField = new JTextField("##");
+		numberField = new JTextField("number");
+		attackField = new JTextField("attack");
+		
+		healthField = new JTextField("hp");
+		modifierField = new JTextField("mod");
+		
+		iconLabel = new JLabel("pokemon", new ImageIcon(getClass().getResource("/pokemon/view/images/logo.png")), JLabel.CENTER);
+		nameLabel = new JLabel("name");
+		evolvableLabel = new JLabel("evolvable");
+		numberLabel = new JLabel("number");
+		attackLabel = new JLabel("attack");
+		healthLabel = new JLabel("health");
+		modifierLabel = new JLabel("modifier");
+		pokedexDropDown = new JComboBox();
+		clearButton = new JButton("Clear");
+		saveButton = new JButton("Save");
+		
+		descriptionArea = new JTextArea(5,10);
+		typeArea = new JTextArea(4,15);
+		
+		firstType = new JPanel();
+		secondType = new JPanel();
+		thirdType = new JPanel();
+		fourthType = new JPanel();
+		
+		setupComboBox();
+		setupTypePanels();
+		setupPanel();
+		setupLayout();
+		setupListeners();	
+	}
+	 private void setupComboBox()
+	 {
+		 DefaultComboBoxModel pokemonModel = new DefaultComboBoxModel(appController,convertPokedex());
+		 pokedexDropdown,setModel(pokemonModel);
+	 }
+	 
+	 private void setupTypePanels()
+	 {
+		 
+	 }
+	 private void setupPanel()
+	 {
+		 
+	 }
+	 private void updateImage()
+	 {
+		 
+	 }
+
+	 private void setupLayout()
+	 
+	 private void setupListeners()
+	 {
+		 pokedexDropdown.addActionListener(new ActionListener() {
+			 {
+				 public void actionPerformed(ActionEvent selection)
+				 {
+					 int selectedPokemonIndex = pokedexDropdown.getSelectedIndex();
+					 updatePokedexInfo(selectedPokemonIndex);
+					 updateImage();
+					 updateTypePanels();
+					 repaint();
+				 }
+			 });
+		 }
+	 }
+	 
+	 private void updateTypePanels()
+	 {
+		 String [] types = appController.getPokedex().get(pokedexDropdown.getSelectedIndex()).getPokemonTypes();
+		 
+		 //Change this to match your 3 minimum Types in your pokedex
+		 if (types[0].equals("electric"))
+		 {
+			 firstType.setBackground(Color.YELLOW);
+		 }
+		 else if (types[0].equals("Water"))
+		 {
+			 firstType.setBackground(Color.BLUE);
+		 }
+		 else if (types[0].equals("Fire"))
+		 {
+			 firstType.setBackground(Color.RED);
+	 	 }
+		 else
+		 {
+			 firstType.setBackground(Color.BLUE);
+		 }
+		 if (types.length > 1)
+		 {
+			 if(types[1].equals("Electric"))
+			 {
+				 secondType.setBackground(Color.YELLOW);
+			 }
+			 
+			 if (types.length == 3)
+			 {
+				 
+			 }
+		 }
+	 }
+	 
 	private void updatePokedexInfo(int index)
 	{
 		nameField.setText(appController.getPokedex().get(index).getName());

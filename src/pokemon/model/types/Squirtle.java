@@ -45,12 +45,14 @@ public class Squirtle extends Pokemon implements Water, Comparable
 	@Override
 	public int Whirlpool(int amount)
 	{
+		
+		
 		return 0;
 	}
 
 	@Override
 	public String sayBubbleBeam()
-	{
-		return null;
+	{	
+		return "Bubblebeam";
 	}
 }

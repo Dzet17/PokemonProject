@@ -39,18 +39,20 @@ public class Zapdos extends Pokemon implements Electric, Comparable
 	@Override
 	public void LightningStrike()
 	{
-		
+		System.out.print("Zapdos used LightningStrike");
 	}
 
 	@Override
 	public int intimidate(int amount)
 	{
-		return 0;
+		int intimidation = 0;
+		
+		return intimidation;
 	}
 
 	@Override
 	public String sayPika()
 	{
-		return null;
+		return "It's lit";
 	}
 }

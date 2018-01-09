@@ -3,20 +3,42 @@ package pokemon.controller;
 import pokemon.model.types.*;
 import java.util.List;
 import java.util.ArrayList;
+import pokemon.model.*;
+import pokemon.controller.*;
 
 public class PokemonController
 {
-
-	private List<Pokemon> pokedex;
-	
-	public List<Pokemon> getPokedex()
+	public PokemonController()
 	{
+		private ArrayList<Pokemon>();
+		buildPokedex();
+	
+		appFrame = new PokemonFrame(this);
+	}
+
+	private void buildPokedex()
+	{
+		Charizard myCharizard = new
+				Charizard();
+		Charmander myCharmander = new
+				Charmander();
+		Gyarados myGyarados = new
+				Gyarados();
+		Pikachu myPikachu = new
+				Pikachu();
+		Squirtle mySquirtle = new
+				Squirtle();
+		Zapdos myZapdos = new
+				Zapdos();
+		
 		return pokedex;
 	}
 	
+	public List<Pokemon> getPokedex()
+	
 	public boolean isValidInteger(String input)
 	{
-boolean valid = false;
+		boolean valid = false;
 		
 		try
 		{
@@ -48,10 +70,21 @@ boolean valid = false;
 		return valid;
 	}
 
+	public String [] convertPokedex()
+	{
+		String [] names = new String [pokedex.size()];
+		
+		for (int index = 0; index < pokedex.size(); index++)
+		{
+			names[index] = pokedex.get(index).getName();
+		}
+		
+		return names;
+	}
+
 	public void start()
 	{
 		
 	}
-	
-	
+	 
 }
