@@ -1,12 +1,12 @@
 package pokemon.controller;
 
-import pokemon.controller.PokemonController;
+import pokemon.controller.PokeController;
 
 public class PokemonRunner
 {
 	public static void main (String [] args)
 	{
-		PokemonController myApp = new PokemonController();
+		PokeController myApp = new PokeController();
 		myApp.start();
 	}
 }

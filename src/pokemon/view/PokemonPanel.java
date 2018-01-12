@@ -1,19 +1,23 @@
 package pokemon.view;
 
 import java.awt.Color;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JCheckBox;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import javax.swing.JComboBox;
-import pokemon.controller.PokemonController;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import pokemon.model.*;
 import pokemon.model.types.*;
-import java.awt.event.*;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.SpringLayout;
+import pokemon.controller.*;
 
-public class PokemonPanel extends JPanel
+public class PokemonPanel<appController, appController> extends JPanel
 {
 	
 		private PokemonController appController;
@@ -45,9 +49,9 @@ public class PokemonPanel extends JPanel
 		private JPanel thirdType;
 		private JPanel fourthType;
 
-	}
+		private JTextArea descriptionArea;
 	
-	public PokedexPanel(PokemonController appController)
+public PokemonPanel(PokeController appController)
 	{
 		super();
 		this.appController = appController;
@@ -87,34 +91,69 @@ public class PokemonPanel extends JPanel
 		setupLayout();
 		setupListeners();	
 	}
+	
+	private void updatePokedexInfo(int index)
+	{
+		nameField.setText(appController.getPokedex().get(index).getName());
+		evolvableBox.setSelected(appController.getPokedex().get(index).isCanEvolve());
+		numberField.setText(appController.getPokedex().get(index).getAttackPoints() + "");
+		attackField.setText(appController.getPokedex().get(index).getHealthPoints() + "");
+		modifierField.setText(appController.getPokedex().get(index).getEnhancementModifier() + "");
+		
+		descriptionArea.setText(appController.getPokedex().get(index).toString());
+		typeArea.setText("");
+		
+		for (String current : appController.getPokedex().get(index).getPokemonTypes());
+		{
+			typeArea.append(current + "\n");
+		}
+	}	
+		
 	 private void setupComboBox()
 	 {
-		 DefaultComboBoxModel pokemonModel = new DefaultComboBoxModel(appController,convertPokedex());
-		 pokedexDropdown,setModel(pokemonModel);
+		 DefaultComboBoxModel pokemonModel = new DefaultComboBoxModel(appController.convertPokedex());
+		 pokedexDropDown.setModel(pokemonModel);
 	 }
 	 
-	 private void setupTypePanels()
+	private void setupTypePanels()
 	 {
 		 
 	 }
+	
 	 private void setupPanel()
 	 {
 		 
 	 }
+	 
 	 private void updateImage()
 	 {
+		 String path = "/pokemon/view/images/";
+		 String defaultName = "ultraball";
+		 String name = pokedexDropDown.getSelectedItem().toString();
+		 String extension = ".png";
+		 ImageIcon pokemonIcon;
 		 
+		 try
+		 {
+			 pokemonIcon = new ImageIcon(getClass().getResource(path + name + extension));
+		 }
+		 catch (NullPointerException missingImageFile)
+		 {
+			 pokemonIcon = new ImageIcon(getClass().getResource(path + defaultName + extension));
+		 }
+		 
+		 iconLabel.setIcon(pokemonIcon);
 	 }
 
 	 private void setupLayout()
 	 
 	 private void setupListeners()
 	 {
-		 pokedexDropdown.addActionListener(new ActionListener() {
+		 pokedexDropDown.addActionListener(new ActionListener() {
 			 {
 				 public void actionPerformed(ActionEvent selection)
 				 {
-					 int selectedPokemonIndex = pokedexDropdown.getSelectedIndex();
+					 int selectedPokemonIndex = pokedexDropDown.getSelectedIndex();
 					 updatePokedexInfo(selectedPokemonIndex);
 					 updateImage();
 					 updateTypePanels();
@@ -126,7 +165,7 @@ public class PokemonPanel extends JPanel
 	 
 	 private void updateTypePanels()
 	 {
-		 String [] types = appController.getPokedex().get(pokedexDropdown.getSelectedIndex()).getPokemonTypes();
+		 String [] types = appController.getPokedex().get(pokedexDropDown.getSelectedIndex()).getPokemonTypes();
 		 
 		 //Change this to match your 3 minimum Types in your pokedex
 		 if (types[0].equals("electric"))

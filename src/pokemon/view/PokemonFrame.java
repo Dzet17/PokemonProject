@@ -2,19 +2,19 @@ package pokemon.view;
 
 import javax.swing.JFrame;
 
-import pokemon.controller.PokemonController;
+import pokemon.controller.PokeController;
 import pokemon.view.PokemonPanel;
 
 public class PokemonFrame extends JFrame
 {
-	private PokemonController pokemonController;
+	private PokeController pokeController;
 	private PokemonPanel pokemonPanel;
 	
-	public PokemonFrame(PokemonController pokemonController)
+	public PokemonFrame(PokeController pokeController)
 	{
 		super();
-		this.pokemonController = pokemonController;
-		pokemonPanel = new PokemonPanel(pokemonController);
+		this.pokeController = pokeController;
+		pokemonPanel = new PokemonPanel(pokeController);
 		setupFrame();
 	}
 	
