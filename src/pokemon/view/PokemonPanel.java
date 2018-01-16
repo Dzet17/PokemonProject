@@ -17,10 +17,10 @@ import javax.swing.JTextField;
 import javax.swing.SpringLayout;
 import pokemon.controller.*;
 
-public class PokemonPanel<appController, appController> extends JPanel
+public class PokemonPanel
 {
 	
-		private PokemonController appController;
+		private PokeController appController;
 	
 		private JLabel healthLabel;
 		private JLabel attackLabel;
@@ -146,6 +146,9 @@ public PokemonPanel(PokeController appController)
 	 }
 
 	 private void setupLayout()
+	 {
+		 
+	 }
 	 
 	 private void setupListeners()
 	 {
@@ -158,10 +161,10 @@ public PokemonPanel(PokeController appController)
 					 updateImage();
 					 updateTypePanels();
 					 repaint();
-				 }
-			 });
+				 });
+			 }
 		 }
-	 }
+
 	 
 	 private void updateTypePanels()
 	 {

@@ -55,7 +55,7 @@ public class PokeController<PokedexFrame>
 		return types;
 	}
 	
-	private void buildPokedex()
+	private List<Pokemon> buildPokedex()
 	{
 		Charizard myCharizard = new
 				Charizard();
